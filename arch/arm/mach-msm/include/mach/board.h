@@ -337,6 +337,7 @@ struct msm_camera_sensor_platform_info {
 	enum sensor_flip_mirror_info mirror_flip;
 	void *privacy_light_info;
 	enum sensor_mount_angle sensor_mount_angle; 
+	bool ews_enable;
 	
 };
 
@@ -558,6 +559,8 @@ struct msm_panel_common_pdata {
 	u32 splash_screen_size;
 	char mdp_iommu_split_domain;
 	u32 avtimer_phy;
+	int (*mdp_color_enhance)(void);
+	int (*mdp_gamma)(void);
 };
 
 
